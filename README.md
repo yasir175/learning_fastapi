@@ -175,11 +175,6 @@ ACCESS_TOKEN_EXPIRE_MINUTES=60
 
 DATABASE_URL=postgresql+psycopg://user:password@host:5432/dbname?sslmode=require
 ```
-
-> **Note:** **Never commit your `.env` file.** It is already listed in `.gitignore`.
-
----
-
 ## Getting Started
 
 ### Prerequisites

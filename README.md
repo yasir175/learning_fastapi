@@ -1,10 +1,10 @@
-# πŸš€ FastAPI Social Posts API
+# FastAPI Social Posts API
 
 A full-featured RESTful API built with **FastAPI** and **PostgreSQL**, implementing a social-media-style backend where users can register, create posts, and vote on them. The project is deployed on **Render** and uses **Alembic** for database migrations.
 
 ---
 
-## πŸ"‹ Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -34,7 +34,7 @@ This project is a learning-focused but production-ready FastAPI application that
 
 ---
 
-## ✨ Features
+## Features
 
 - **JWT Authentication** — Secure login with access tokens (HS256, configurable expiry)
 - **User Management** — Register and retrieve user profiles with hashed passwords (bcrypt)
@@ -47,7 +47,7 @@ This project is a learning-focused but production-ready FastAPI application that
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -64,35 +64,35 @@ This project is a learning-focused but production-ready FastAPI application that
 
 ---
 
-## πŸ" Project Structure
+## Project Structure
 
 ```
 fastapi/
-β"œβ"€β"€ app/
-β"‚   β"œβ"€β"€ main.py           # FastAPI app entry point, middleware, route registration
-β"‚   β"œβ"€β"€ models.py         # SQLAlchemy ORM models (User, Post, Vote)
-β"‚   β"œβ"€β"€ schemas.py        # Pydantic schemas for request/response validation
-β"‚   β"œβ"€β"€ database.py       # Database engine and session setup
-β"‚   β"œβ"€β"€ config.py         # Pydantic Settings (loads from .env)
-β"‚   β"œβ"€β"€ oauth2.py         # JWT token creation and verification
-β"‚   β"œβ"€β"€ utils.py          # Password hashing utilities
-β"‚   └── routers/
-β"‚       β"œβ"€β"€ post.py        # Post CRUD endpoints
-β"‚       β"œβ"€β"€ user.py        # User registration/profile endpoints
-β"‚       β"œβ"€β"€ auth.py        # Login / token generation
-β"‚       └── vote.py        # Vote (upvote/unvote) endpoints
-β"œβ"€β"€ alembic/
-β"‚   β"œβ"€β"€ env.py            # Alembic environment config (reads from app settings)
-β"‚   β"œβ"€β"€ script.py.mako    # Migration file template
-β"‚   └── versions/         # Migration revision files
-β"œβ"€β"€ alembic.ini           # Alembic configuration file
-β"œβ"€β"€ requirements.txt      # All Python dependencies
+├── app/
+│   ├── main.py           # FastAPI app entry point, middleware, route registration
+│   ├── models.py         # SQLAlchemy ORM models (User, Post, Vote)
+│   ├── schemas.py        # Pydantic schemas for request/response validation
+│   ├── database.py       # Database engine and session setup
+│   ├── config.py         # Pydantic Settings (loads from .env)
+│   ├── oauth2.py         # JWT token creation and verification
+│   ├── utils.py          # Password hashing utilities
+│   └── routers/
+│       ├── post.py       # Post CRUD endpoints
+│       ├── user.py       # User registration/profile endpoints
+│       ├── auth.py       # Login / token generation
+│       └── vote.py       # Vote (upvote/unvote) endpoints
+├── alembic/
+│   ├── env.py            # Alembic environment config (reads from app settings)
+│   ├── script.py.mako    # Migration file template
+│   └── versions/         # Migration revision files
+├── alembic.ini           # Alembic configuration file
+├── requirements.txt      # All Python dependencies
 └── .env                  # Environment variables (not committed)
 ```
 
 ---
 
-## πŸ—ƒ Database Schema
+## Database Schema
 
 ### `users`
 | Column | Type | Notes |
@@ -121,7 +121,7 @@ fastapi/
 
 ---
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Root
 | Method | Path | Description |
@@ -154,11 +154,11 @@ fastapi/
 |---|---|---|---|
 | POST | `/` | Upvote or unvote a post | ✅ |
 
-> **ℹ️ Interactive docs** available at `http://localhost:8000/docs` after running locally.
+> **Note:** Interactive docs available at `http://localhost:8000/docs` after running locally.
 
 ---
 
-## πŸ" Environment Variables
+## Environment Variables
 
 Create a `.env` file in the project root with the following variables:
 
@@ -176,11 +176,11 @@ ACCESS_TOKEN_EXPIRE_MINUTES=60
 DATABASE_URL=postgresql+psycopg://user:password@host:5432/dbname?sslmode=require
 ```
 
-> ⚠️ **Never commit your `.env` file.** It is already listed in `.gitignore`.
+> **Note:** **Never commit your `.env` file.** It is already listed in `.gitignore`.
 
 ---
 
-## ⚙️ Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -214,7 +214,7 @@ The API will be available at `http://localhost:8000`.
 
 ---
 
-## πŸ"„ Database Migrations
+## Database Migrations
 
 This project uses **Alembic** for schema migrations. The `alembic/env.py` is configured to read database credentials from your `.env` file via `app.config`.
 
@@ -236,7 +236,7 @@ Migration files are stored in `alembic/versions/`. The current schema includes t
 
 ---
 
-## ☁️ Deployment
+## Deployment
 
 The application is deployed on **[Render](https://render.com)**:
 
@@ -248,7 +248,7 @@ The `DATABASE_URL` environment variable (set in the Render dashboard) is used by
 
 ---
 
-## πŸ"¦ Key Dependencies
+## Key Dependencies
 
 ```
 fastapi==0.116.1
@@ -269,7 +269,7 @@ Full list available in [`requirements.txt`](./requirements.txt).
 
 ---
 
-## πŸ'¨β€πŸ'» Author
+## Author
 
 **Yasir** — [@yasir175](https://github.com/yasir175)
 
